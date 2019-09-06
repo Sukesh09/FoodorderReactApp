@@ -18,7 +18,7 @@ function FoodItem(props) {
     const {foodItem,addFoodItem} = props
     return (
         <div style={boader}>
-            <img src={foodItem.logo} style={imageStyle}/>
+            <img src={foodItem.imageUrl} style={imageStyle}/>
             <h3 style={heading}>{foodItem.name}</h3>
             <p>Rating : {foodItem.rating}</p>
             <p>Price : {foodItem.price}</p>

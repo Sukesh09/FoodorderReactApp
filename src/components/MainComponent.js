@@ -3,6 +3,9 @@ import FoodList from './FoodList';
 import Login from './Login';
 import Checkout from './Checkout';
 import CheckoutScreen from './CheckoutScreen';
+import FoodList_Dessert from './FoodList_Desserts'
+import FoodList_Pizza from './FoodList_Pizza'
+import FoodList_Taco from './FoodList_Taco'
 
 class MainComponent extends Component {
     constructor(props) {
@@ -71,7 +74,14 @@ class MainComponent extends Component {
             return(
             <div className="App-header">
             <Login></Login>
+            <p>---------------------------------------Burgers------------------------------------------</p>
             <FoodList addFoodItem={this.addFoodItem}></FoodList>
+            <p>-------------------------------------------Desserts--------------------------------------</p>
+            <FoodList_Dessert addFoodItem={this.addFoodItem}></FoodList_Dessert>
+            <p>----------------------------------------Pizza-----------------------------------------</p>
+            <FoodList_Pizza addFoodItem={this.addFoodItem}></FoodList_Pizza>
+            <p>----------------------------------------Taco-----------------------------------------</p>
+            <FoodList_Taco addFoodItem={this.addFoodItem}></FoodList_Taco>
             <p>---------------------------------------------------------------------------------</p>
             <CheckoutScreen onRemoveItem={this.onRemoveItem} addFoodItem={this.addFoodItem} checkoutItems={this.state.checkoutItems}></CheckoutScreen>
             <p>Total : {this.state.total}</p>

@@ -13,7 +13,7 @@ function FoodList(props) {
         Axios.get('http://localhost:5000/foodItems')
         .then(res => {
           console.log(res)  
-          setFood(res.data.data.items.burger)
+          setFood(res.data.data.items.dessert)
         })
         .catch(error => {
           console.log(error)  

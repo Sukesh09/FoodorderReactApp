@@ -19,7 +19,7 @@ function CheckoutItem(props) {
     return (
         <table style={boader}>
             <tr>
-            <th style={boader}><img src={foodItem.logo} style={imageStyle}/></th>
+            <th style={boader}><img src={foodItem.imageUrl} style={imageStyle}/></th>
             <th style={boader}><h3 style={heading}>{foodItem.name}</h3></th>
             {/* <p>Rating : {foodItem.rating}</p> */}
             <th style={boader}><p>Price : {foodItem.price}</p></th>
