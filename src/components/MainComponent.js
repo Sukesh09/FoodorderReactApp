@@ -59,7 +59,7 @@ class MainComponent extends Component {
     };
 
     onCheckoutClick(){
-            if(this.state.total==0){
+            if(this.state.total===0){
               alert(`cart is empty`)
             }else {
               alert(`Please pay : ${this.state.total}`)
@@ -82,7 +82,7 @@ class MainComponent extends Component {
             <FoodList_Pizza addFoodItem={this.addFoodItem}></FoodList_Pizza>
             <p>----------------------------------------Taco-----------------------------------------</p>
             <FoodList_Taco addFoodItem={this.addFoodItem}></FoodList_Taco>
-            <p>---------------------------------------------------------------------------------</p>
+            <p>----------------------------------------Checkout Items-----------------------------------------</p>
             <CheckoutScreen onRemoveItem={this.onRemoveItem} addFoodItem={this.addFoodItem} checkoutItems={this.state.checkoutItems}></CheckoutScreen>
             <p>Total : {this.state.total}</p>
             <Checkout onCheckoutClick={this.onCheckoutClick}></Checkout>
