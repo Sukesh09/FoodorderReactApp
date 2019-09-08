@@ -15,7 +15,7 @@ function FoodList(props) {
         .catch(error => {
           console.log(error)  
         })
-    })
+    },[])
 
     const {addFoodItem} = props
     

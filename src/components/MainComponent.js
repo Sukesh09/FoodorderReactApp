@@ -6,6 +6,7 @@ import CheckoutScreen from './CheckoutScreen';
 import FoodList_Dessert from './FoodList_Desserts'
 import FoodList_Pizza from './FoodList_Pizza'
 import FoodList_Taco from './FoodList_Taco'
+import Axios from 'axios'
 
 class MainComponent extends Component {
     constructor(props) {
@@ -62,7 +63,15 @@ class MainComponent extends Component {
             if(this.state.total===0){
               alert(`cart is empty`)
             }else {
-              alert(`Please pay : ${this.state.total}`)
+              Axios.get('http://localhost:5000/placeOrder')
+              .then(res => {
+                console.log(res)  
+                alert(res.data)
+               // alert(`Please pay : ${this.state.total}`)
+              })
+              .catch(error => {
+                console.log(error)  
+              })
             }
     }
     onClearItems = () => {
